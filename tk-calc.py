@@ -10,6 +10,7 @@ display = tk.Label(window, text=curr_display)
 display.grid(row=3, column=5, columnspan=3)
 
 
+
 numbers = []
 for i in range(1,10):
     button = tk.Button(window, text=i, state=tk.NORMAL, command=lambda i=i: num_in(i))
@@ -22,7 +23,25 @@ zero_btn.grid(row=8, column=6)
 for row in range(0,3):
     for column in range(0,3):
         i = row * 3 + column
-        numbers[i].grid(row=row+5, column=column+5,)
+        numbers[i].grid(row=row+5, column=column+5)
+        
+add_btn = tk.Button(window, text='+', command=lambda : addition())
+add_btn.grid(row=5, column=10)
+
+subtract_btn = tk.Button(window, text='-', command=lambda : subtraction())
+subtract_btn.grid(row=6, column=10)
+
+divide_btn = tk.Button(window, text='/', command=lambda : divide())
+divide_btn.grid(row=7, column=10)
+
+multiply_btn = tk.Button(window, text='x', command=lambda : multiply())
+multiply_btn.grid(row=8, column=10)
+
+equal_btn = tk.Button(window, text='=', command=lambda: equal())
+equal_btn.grid(row=9, column=10)
+
+clear_btn = tk.Button(window, text='Clear', command=lambda: clear())
+clear_btn.grid(row=11, column = 6)
              
 def num_in(i):
     global curr_display
@@ -92,25 +111,6 @@ def clear():
     operations = None
     display = tk.Label(window, text=curr_display, padx=10)
     display.grid(row=3, column=5, columnspan=5)
-    
-    
-add_btn = tk.Button(window, text='+', command=lambda : addition())
-add_btn.grid(row=5, column=10)
-
-subtract_btn = tk.Button(window, text='-', command=lambda : subtraction())
-subtract_btn.grid(row=6, column=10)
-
-divide_btn = tk.Button(window, text='/', command=lambda : divide())
-divide_btn.grid(row=7, column=10)
-
-multiply_btn = tk.Button(window, text='x', command=lambda : multiply())
-multiply_btn.grid(row=8, column=10)
-
-equal_btn = tk.Button(window, text='=', command=lambda: equal())
-equal_btn.grid(row=9, column=10)
-
-clear_btn = tk.Button(window, text='Clear', command=lambda: clear())
-clear_btn.grid(row=11, column = 6)
 
         
 window.mainloop()
