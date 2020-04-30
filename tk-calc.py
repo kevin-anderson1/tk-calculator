@@ -4,10 +4,10 @@ curr_display = '       '
 window = tk.Tk()
 window.title('Calculator')
 window.geometry('130x180')
-display = tk.Label(window)
-display.grid(row=3, column=5, columnspan=3)
 header = tk.Label(window, text='Calculator')
 header.grid(row=1, column=6, columnspan=3)
+display = tk.Label(window, text=curr_display)
+display.grid(row=3, column=5, columnspan=3)
 
 
 numbers = []
