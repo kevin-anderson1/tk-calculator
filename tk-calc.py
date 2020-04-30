@@ -90,7 +90,6 @@ def clear():
     num2 = None
     curr_display = '         '
     operations = None
-    clear_output()
     display = tk.Label(window, text=curr_display, padx=10)
     display.grid(row=3, column=5, columnspan=5)
     
