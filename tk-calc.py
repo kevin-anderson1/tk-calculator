@@ -1,5 +1,4 @@
 import tkinter as tk
-from IPython.display import clear_output
 
 curr_display = '       '
 window = tk.Tk()
