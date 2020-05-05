@@ -1,2 +1,2 @@
 # tk-calculator
-Basic calculator using Tkinter. Includes numberpad buttons and clear display functionality rather than simple keyboard inputs
+Basic calculator using Tkinter. Features a dynamically updating display and traditional numberpad buttons rather than a keyboard input.
